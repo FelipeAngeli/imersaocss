@@ -1,0 +1,45 @@
+body{
+  background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
+  background-size:auto 100vh;
+  font-family: Arial ;
+  height: 100vh;
+}
+
+.menu{
+  background-color: white;
+  
+}
+
+a{
+  text-decoration:none;
+  color: teal;
+}
+
+a:hover{
+  text-decoration: underline; 
+}
+
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li{
+  list-style:none;
+}
+
+.site-title, .site-subtitle {
+  color: whitesmoke;
+  text-align: center; 
+}
+
+.site-title {
+  font-style: bold;
+  font-size: 46px;
+}
+
+.site-subtitle{
+  font-size: 36px;
+  font-style: italic;
+  
+}
