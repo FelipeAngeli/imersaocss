@@ -6,8 +6,7 @@
 
 
 body{
-  background-image: url('../img/fundo.jpg');
-  background-size:auto 100vh;
+  
   font-family: Arial ;
   height: 100vh;
 }
@@ -27,10 +26,18 @@ body{
 }
 
 header{
+  background-image: url('../img/mario.jpg');
+  background-size:auto 100vh;
+
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+section{
+  background-color: #A1ADFF;
 }
 
 .menu{
@@ -42,7 +49,10 @@ header{
 
 a{
   text-decoration:none;
-  color: teal;
+  color: #a1adff;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 a:hover{
@@ -51,7 +61,7 @@ a:hover{
 
 .menu a{
   display: block;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .menu ul{
@@ -64,22 +74,69 @@ a:hover{
 }
 
 .site-title, .site-subtitle {
-  color: whitesmoke;
+  color: #ffffff;
   text-align: center; 
 }
 
 .site-title {
   font-style: bold;
-  font-size: 4em;
+  font-size: 3em;
+  font-family: 'Press Start 2P', cursive;
+  
 }
 
 .site-subtitle{
-  font-size: 3em;
+  font-size: 2em;
   font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 2em;
+  padding-bottom: 130px;
   
+}
+
+.portfolio{
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  margin: 2em;
+  text-align: center;
+}
+
+/* grid */
+.portfolio .grid{
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 650px){
+  .portfolio .grid{
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+  }
+}
+
+/* grid */
+.portfolio figure{
+  text-align: center;
 }
 
 .img-portfolio{
   height: 180px;
-  width: 180px;
+  width: 260px;
+  object-fit: cover; /*reajusta a imagem recordando tamanho riginal*/
+}
+
+
+@media (min-width: 1200px){
+  .img-portfolio{
+    height: 200px;
+    width: 280px;
+  }
+
+  .portfolio .grid{
+    grid-template-columns: 310px 310px;
+  }
 }
