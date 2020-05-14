@@ -140,3 +140,13 @@ a:hover{
     grid-template-columns: 310px 310px;
   }
 }
+
+
+/*cursor*/
+
+#mario {
+  position: absolute;
+  z-index: 50;
+
+  transition: transform .1s;
+}
