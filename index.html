@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/facd0b5175.js" crossorigin="anonymous"></script>
     <title>Felipe Angeli</title>
 </head>
 <body>
@@ -12,42 +14,77 @@
         <nav class="menu">
           <ul>
             <li><a href="#"> Sobre </a></li>
-            <li><a href="#"> Portfolio </a></li>
-            <li><a href="#"> Contato </a></li>
+            <li><a href="#portfolio"> Portfolio </a></li>
+            <li><a href="#contato"> Contato </a></li>
           </ul>
         </nav>
 
-        <div>
+        <div class="titulo">
           <h1 class="site-title"> Felipe Angeli</h1>
           <h2 class="site-subtitle"> Web Developer</h2>  
         </div>
     </header>
 
-      <section class="portfolio">
+    <section class="sobre"> 
+      <h2>Sobre</h2>
+        <figure class="avatar">
+          <img src="img/perfil.jpg" alt="">
+        </figure>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ratione reiciendis aperiam dicta error eum ut at! Illum, reiciendis reprehenderit 
+            alias earum architecto nostrum. Quisquam aliquid odit officia impedit repudiandae possimus!
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum, minus eligendi 
+            necessitatibus impedit debitis reprehenderit sequi voluptate placeat, corrupti magni quae nulla.
+             Natus ea atque fugit tempora ipsum omnis!
+          </p>
+          <p>Este site foi construido durante <a href="https://www.alura.com.br/imersao-css">Irmersão CSS da Aluera</a>. 
+          </p>
+    </section>
+
+      <section class="portfolio" id="portfolio">
         <h2>Portfólio</h2>
           <div class="grid">
             <figure>
-              <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-              <figcaption>eCommerce</figcaption>
+             <a href="https://github.com/FelipeAngeli">
+              <img class="img-portfolio" src="./img/front.jpg" alt="web developer">
+             </a>
+              <figcaption>Web Developer</figcaption>
             </figure>
             <figure>
-              <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-              <figcaption>Mobile</figcaption>
-            </figure>
-            <figure>
-              <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+              <a href="https://www.felipeangeli.com.br/">
+                <img class="img-portfolio" src="./img/webdesign.jpg" alt="Web design">
+              </a>
               <figcaption>Web design</figcaption>
             </figure>
-            <figure>
-              <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
-              <figcaption>Projetos pessoais</figcaption>
-            </figure>
-        </div>  
+          </div>  
       </section>
+
+      <section class="contato" id="contato">
+        <h2>Contato</h2>
+          <div class="grid icons">
+          <a target="_blank" href="https://github.com/FelipeAngeli">
+            <i class="fab fa-github icon-up"></i>
+          </a>
+          <a target="_blank" href="https://twitter.com/havexhope">
+            <i class="fab fa-twitter icon-up"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/felipeangeli/">
+            <i class="fab fa-linkedin-in icon-up"></i>
+          </a>
+          <a href="felipe.angeli@gmail.com">
+            <i class="fas fa-at icon-up"></i>
+          </a>
+        </div>
+      </section>
+      
 
       <!--coursor-->
       <img src="img/moeda.png" alt="" id="mario" class="mario">
 
-<script src="js/estilo.js"></script>    
+<script src="js/estilo.js"></script>
+
+
 </body>
 </html>

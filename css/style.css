@@ -7,27 +7,63 @@
 
 body{
   
-  font-family: Arial ;
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
 }
 
 /* para tela 400px*/
 @media (min-width: 400px) {
-  body{
-    font-size: 14px;
+  header{
+   
+    background-size:auto 100vh;
   }
+  body{
+    font-size: 18px;
+  } 
+  .site-title {
+    font-size: 0.5em;
+    letter-spacing: 2px;
+  
+  }
+  
+  .site-subtitle{
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+
+  .menu a{
+    font-size: 18px;
+  }
+
+  .sobre .avatar img {
+    height:190px;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .contato a{
+    color: #ffffff;
+    font-size: 2em;
+    padding: 15px;
+    
+    
+  }
+
 }
 
-/* para tela 600*/
+/* para tela 600  */
 @media (min-width: 600px) {
   body{
     font-size: 18px;
+    background-image: url('../img/mario-min.jpg');
   }
+
 }
 
 header{
   background-image: url('../img/mario.jpg');
-  background-size:auto 100vh;
+  /*background-size:auto 100vh;*/
+  background-size: cover;
 
   height: 100vh;
   display: flex;
@@ -44,7 +80,9 @@ section{
   background-color: white;
   position: fixed;
   width: 100vw;
+  height: 38px;
   top: 0;
+  z-index: 1;
 }
 
 a{
@@ -55,13 +93,38 @@ a{
   font-size: 22px;
 }
 
-a:hover{
-  text-decoration: underline; 
+
+
+/*efeito titulo*/
+.titulo{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+  /* 0%{
+    animação zerada
+  } */
+
+  100%{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 .menu a{
-  display: block;
-  padding: 5px 20px;
+  display: inline-block;
+  padding: 5px 25px;
+  transition: background-color , color 1s;
+}
+
+.menu a:hover{
+  background-color: #a1adff ;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px white solid;
+  border-radius: 20px;
 }
 
 .menu ul{
@@ -94,15 +157,59 @@ a:hover{
   
 }
 
-.portfolio{
-  padding: 2em;
-  height: 100vh;
+.avatar{
+  float: left;
+  margin-right:30px;
+  margin-bottom: 30px;
+  
+}
+
+.sobre .avatar img{
+  height: 250px;
+  width: 260px;
+}
+
+.sobre, .portfolio, .contato{
+  padding: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-windth: 1200px){
+  .sobre, .portfolio, .contato{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.sobre h2{
+  font-family: 'Press Start 2P', cursive;
+  margin: 2em;
+  text-align: center;
+}
+
+.sobre p{
+  text-indent: 2em; /* espaçamento da primeira linha do paragrafo*/
+
+}
+
+.sobre a{
+  color: #ffffff;
+}
+
+.contato h2{
+  font-family: 'Press Start 2P', cursive;
+  margin: 2em;
+  text-align: center;
 }
 
 .portfolio h2 {
   font-family: 'Press Start 2P', cursive;
   margin: 2em;
   text-align: center;
+  
 }
 
 /* grid */
@@ -110,12 +217,9 @@ a:hover{
   display: grid;
   gap: 2em;
 }
-
-@media (min-width: 650px){
-  .portfolio .grid{
-    grid-template-columns: 300px 300px;
-    justify-content: center;
-  }
+.portfolio .grid{
+  grid-template-columns: 300px 300px;
+  justify-content: center;
 }
 
 /* grid */
@@ -127,6 +231,13 @@ a:hover{
   height: 180px;
   width: 260px;
   object-fit: cover; /*reajusta a imagem recordando tamanho riginal*/
+  transition: transform 500ms;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  
+}
+
+.img-portfolio:hover{
+  transform: scale(1.1) rotate(2deg);
 }
 
 
@@ -140,6 +251,50 @@ a:hover{
     grid-template-columns: 310px 310px;
   }
 }
+
+
+.contato a{
+  color: #ffffff;
+  font-size: 2em;
+  transition: 1s;
+  text-decoration: none;
+}
+
+.icon-up a:active,
+.icon-up a:hover{
+  text-decoration: none;
+  
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-right:20px;
+
+  animation-name: icon-up;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-out;
+
+  position: absolute;
+  right: 10px;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  content: icon;
+  
+}
+
+.contato .icons{
+  text-align: center;
+
+}
+
+  /* icon up */
+  
+  .icon-up {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-right:20px;
+  }
+
 
 
 /*cursor*/
